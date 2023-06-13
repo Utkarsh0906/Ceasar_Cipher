@@ -16,7 +16,7 @@ while(True):
     
     direction = input("Enter E for encoding and D for decoding: ").lower()
     code = input("Enter the string: ").lower()
-    shift = int(input("Enter the shift: "))
+    shift = int(input("Enter the shift: "))%26
     print(cypher(code,shift,direction))
     call = input("Enter Y to continue and N to stop: ").lower()
     
