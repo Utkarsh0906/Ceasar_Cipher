@@ -12,6 +12,7 @@ def cypher(code, shift,direction):
             code[i] = alphabet[index]
     return "".join(code)
 
+print("Welcome!!!")
 while(True):
     
     direction = input("Enter E for encoding and D for decoding: ").lower()
@@ -21,4 +22,5 @@ while(True):
     call = input("Enter Y to continue and N to stop: ").lower()
     
     if(call == "n"):
+        print("GoodBye!!")
         break
