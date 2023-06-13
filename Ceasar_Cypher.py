@@ -4,13 +4,14 @@ def cypher(code, shift,direction):
         shift *= -1
     code = list(code)
     for i in range (len(code)):
-        index = alphabet.index(code[i])+shift
-        code[i] = alphabet[index]
+        if code[i] in alphabet:
+            index = alphabet.index(code[i])+shift
+            code[i] = alphabet[index]
     return "".join(code)
 
 while(True):
     direction = input("Enter E for encoding and D for decoding: ").lower()
-    code = input("Enter the string to encode: ").lower()
+    code = input("Enter the string: ").lower()
     shift = int(input("Enter the shift: "))
     print(cypher(code,shift,direction))
     call = input("Enter Y to continue and N to stop: ").lower()
